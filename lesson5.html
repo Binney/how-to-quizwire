@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lesson 4: Javascript | How To Quizwire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>More complex Javascript commands</h1>
+
+        <p>We'll now cover three features of programming languages which are very useful: if, for, and while.</p>
+
+        <div class="actions">Create a new web page for these commands.</div>
+            
+        <h2>if</h2>
+        <p>You don't always want your code to do the same thing. What if you want something different to happen based on what the user's name is, or the day of the week?
+
+            The answer is, you'd use an <span class="keyword">if</span> statement. They look like this:</p>
+
+        <div class="code">
+if (1 + 1 === 2) {
+    console.log("Maths still works!");
+}
+        </div>
+
+        <p>Let's look a bit more closely at the bit in the round brackets, ( ). This is called the condition. Think about what possible values that could be.
+
+        Either 1+1 equals 2, or it doesn't. There's no "maybe" about it; there are only 2 possible options. In computing, instead of saying "yes" and "no", we say <span class="keyword">true</span> and <span class="keyword">false</span>.
+
+        There are lots of conditions we could put in those brackets. For example:</p>
+
+        <div class="code">
+var turboModeEnabled = false;
+if (turboModeEnabled) {
+    console.log("Turbo mode is enabled!");
+}
+        </div>
+    
+        <div class="code">
+var myName = "Sarah";
+if (myName === "Mickey Mouse") {
+    console.log("Squeak");
+}
+        </div>
+
+        <p>There's something rather weird about that last bit. Count the number of equals (=) signs on each line. You'll see there's only one equals sign on the first line, but three on the second. What's going on?
+
+            The first line is <span class="keyword">assigning</span> a value of "Sarah" to the myName variable, so we use one equals sign. The second line is <span class="keyword">checking</span> whether two variables are the same, so we use three.        </p>
+
+        <div class="keypoint">
+            If there's <span class="keyword">one</span> equals sign, we're assigning a value.
+
+            If there are <span class="keyword">three</span> equals signs, we're checking if two things are the same or not.
+        </div>
+
+        <p>Time to experiment with this. We're going to create a simple password check.</p>
+
+        <div class="actions">Create a new Javascript file called <b>passwordCheck.js</b> and include it in your web page with a script tag.</div>
+
+        <p>A text entry box looks like this:</p>
+        <input type="text">
+        <p>And a button looks like this:</p>
+        <button>Click me!</button>
+
+        <div class="actions">Use Inspect Element to find out what HTML to you need to create a text entry box and a button. Then, copy it into your own web page.</div>
+
+        <p>Time for the Javascript. First, we need to give IDs to all the elements on the page.</p>
+
+        <div class="actions">Give the input an ID of "password", and the button an ID of "login".</div>
+
+        <p>Time to write our password checking function. Open your Javascript file and copy this out:</p>
+
+        <div class="code">
+function checkPassword() {
+    var password = document.getElementById("password").value;
+    if (password === "swordfish") {
+        console.log(password + " is correct!");
+    }
+}
+        </div>
+    
+        <p>Now we need to call this function whenever you click the button, so add an onclick to your button:</p>
+
+        <div class="code">
+&lt;button id="login" onclick="checkPassword()"&gt;Log In&lt;/button&gt;
+        </div>
+
+        <p>When you're done, you should have something which works like this:</p>
+
+        <div class="demo">
+            <input name="password" type="text" id="password">
+            <button id="login" onclick="checkPassword()">Log In</button>
+            <div id="messages"></div>
+        </div>
+
+        <div class="stretch-goals">Use "else" to log a message saying "That's wrong" if you don't enter the right password.</div>
+
+        <div class="pagination">
+                <a href='lesson4.html'>&#8592; Click here to go back to lesson 4</a>
+                &#2022;
+                <a href='lesson6.html'>Click here to go to lesson 6 &#8594;</a>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

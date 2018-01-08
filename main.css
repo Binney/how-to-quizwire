@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+
+* {
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border-top: 1px solid black;
+}
+
+.pagination a {
+    font-style: italic;
+    padding: 1em;
+}
+
+h1 {
+    padding-top: 3em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid black;
+}
+
+p {
+    white-space: pre-line;
+    line-height: 150%;
+    font-size: 130%;
+}
+
+.keyword {
+    font-weight: bold;
+    color: orange;
+}
+
+.keypoint, .actions, .stretch-goals {
+    position: relative;
+    font-family: 'Consolas', monospace;
+    font-size: 130%;
+    padding: 1em 2em;
+    margin-top: 2em;
+}
+
+.keypoint {
+    background: rebeccapurple;
+    color: lavender;
+}
+
+.actions {
+    background: green;
+    color: cornsilk;
+}
+
+.stretch-goals {
+    background: midnightblue;
+    color: paleturquoise;
+}
+
+.keypoint::before, .actions::before, .stretch-goals::before {
+    color: black;
+    font-size: 175%;
+    font-style: italic;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    transform: translateY(0.3em);
+}
+
+.keypoint::before {
+    content: "Key Point";
+}
+
+.actions::before {
+    content: "Action";
+}
+
+.stretch-goals::before {
+    content: "Stretch Goals";
+}
+
+.keypoint .keyword {
+    color: fuchsia;
+    font-family: 'Consolas', monospace;
+}
+
+.code {
+    background: cornsilk;
+    color: firebrick;
+    font-family: 'Consolas', monospace;
+    white-space: pre-wrap;
+    border: 1px black;
+    border-style: double;
+    padding-left: 2em;
+    margin-bottom: 1em;
+}
+
+.demo {
+    padding: 20px;
+    border: 1px solid teal;
+    border-radius: 5px;
+}
