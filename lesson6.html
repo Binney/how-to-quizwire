@@ -11,19 +11,152 @@
     <div class="container">
         <h1>More complex Javascript commands</h1>
 
-        <p>We just covered if, so now we're going to cover for.</p>
+        <p>We just covered <b>if</b>, so now we're going to cover <b>for</b>.</p>
 
-        <div class="actions">
-            <p>Use the same web page you were using for your password checker.</p>
-        </div>
+        <div class="actions">Use the same web page you were using for your password checker.</div>
             
         <h2>for</h2>
 
+        <p>Let's say you wanted to write down all the numbers from 1 to 10 on a web page. You could just write them out by hand... but that'd take a while, and what if you wanted to count to 100? It would take ages!
+
+            Instead, you can get the computer to do it for you by using a <span class="keyword">for loop</span>. A for loop looks like this: 
+        </p>
+
         <div class="code">
-for (int i = 0; i < 3; i++) {
+for (i = 1; i <= 10; i+=1) {
     console.log(i);
 }
         </div>
+
+        <p>When you execute that, you'll get something which looks like this:</p>
+
+        <button onclick="demonstrateFor()">Run demo</button>
+        <div id="output0"></div>
+
+        <p>Pretty handy! Let's look at what's going on here more closely.
+
+            The <b>for</b> loop is made up of 3 parts.
+            1) i=1
+            This declares a new variable called i, and sets it to 1. If we changed it to 5, we'd get something different:</p>
+            <div class="code">
+for (i = 5; i <= 10; i+=1) {
+    console.log(i);
+}
+            </div>
+            <button onclick="demonstrate1()">Try it!</button>
+            <div id="output1"></div>
+
+            <p>2) i &lt;= 10
+            This is the condition for when our loop is going to stop. In this case, we're telling it to stop when i gets to 10.</p>
+            <div class="code">
+for (i = 1; i <= 5; i+=1) {
+    console.log(i);
+}
+            </div>
+            <button onclick="demonstrate2()">Try it!</button>
+            <div id="output2"></div>
+            <p>3) i+=1
+            This means "increase i by 1". Each time our loop finishes, we add 1 to i, check if our stop condition has happened yet, and then carry out the loop again.</p>
+            <div class="code">
+for (i = 1; i <= 10; i+=2) {
+    console.log(i);
+}
+            </div>
+            <button onclick="demonstrate3()">Try it!</button>
+            <div id="output3"></div>
+
+            <p>Ok, time for an exercise! We're going to make a duplication machine. It's going to take a picture on the page, and duplicate it a certain number of times.
+
+                First, here's the image:
+            </p>
+
+            <img src="butterfly.png">
+
+            <p>Save it into your Work Experience folder. Then add this HTML to your web page:</p>
+
+            <div class="code">
+&lt;div id="target"&gt;
+    &lt;img src="butterfly.png"&gt;
+&lt;/div&gt;
+            </div>
+
+            <p>We also need a box for users to type in how many butterflies they want:</p>
+
+            <input type="number">
+            <div class="code">
+&lt;inupt type="number"&gt;
+            </div>
+
+            <p>(Tip! If you put type="number", then the user will only be able to type numbers into that box, no letters.)
+
+                And we want a button we will use to call our duplication function:
+            </p>
+
+            <button>Click to duplicate</button>
+            <div class="code">
+&lt;button onclick="duplicate()"&gt;Click to duplicate&lt;/button&gt;
+            </div>
+
+            <p>So it's time to write our function. Let's start with the basics:</p>
+
+            <div class="code">
+function duplicate() {
+
+}
+            </div>
+
+            <p>We need to get the inner HTML in our image, and the number of duplicates requested:</p>
+
+            <div class="code">
+function duplicate() {
+    var image = document.getElementById("target").innerHTML;
+    var copies = document.getElementById("copies").value;
+}
+            </div>
+
+            <p>All that remains now is to write our for loop. We want to start at i = 1, and end at i &lt;= copies, increasing i by 1 each time.</p>
+
+            <div class="code">
+for (i = 1; i &lt; copies; i++) {
+
+}
+            </div>
+
+            <p>Excellent: now we just need to make one copy of the butterfly each time.</p>
+
+            <div class="code">
+for (i = 1; i &lt; copies; i++) {
+    document.getElementById("result").innerHTML += image;
+}
+            </div>
+
+            <p>So the whole function looks like this:</p>
+
+            <div class="code">
+function duplicate() {
+    var image = document.getElementById("target").innerHTML;
+    var copies = document.getElementById("copies").value;
+
+    for (i = 1; i &lt;= copies; i++) {
+        document.getElementById("result").innerHTML += image;
+    }
+}
+            </div>
+
+            <p>When you're done, you should have something like this:</p>
+
+            <div class="demo">
+                <div id="target">
+                    <img src="butterfly.png">
+                </div>
+                How many copies? <input id="copies" type="number">
+                <button onclick="duplicate()">Click to duplicate</button>
+                <div id="result"></div>
+            </div>
+
+            <div class="stretch-goals">
+                Clear the result div each time you click the button, using document.getElementById("result").innerHTML = "";
+            </div>
 
         <div class="pagination">
                 <a href='lesson5.html'>&#8592; Click here to go back to lesson 5</a>
@@ -31,6 +164,7 @@ for (int i = 0; i < 3; i++) {
                 <a>Lesson 7 doesn't exist yet &#8594;</a>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="lesson6_demos.js"></script>
+    <script src="lesson6.js"></script>
 </body>
 </html>
