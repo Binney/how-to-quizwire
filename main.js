@@ -5,6 +5,7 @@ function writeMessage(message) {
 }
 
 function checkPassword() {
+    writeMessage("Yes, that's a password");
     var password = document.getElementById("password").value;
     if (password === "swordfish") {
         writeMessage(password + " is correct!");

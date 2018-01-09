@@ -13,7 +13,7 @@
 
         <p>We'll now cover three features of programming languages which are very useful: if, for, and while.</p>
 
-        <div class="actions">Create a new web page for these commands.</div>
+        <div class="actions">Create a new web page for this exercise.</div>
             
         <h2>if</h2>
         <p>You don't always want your code to do the same thing. What if you want something different to happen based on what the user's name is, or the day of the week?
@@ -56,7 +56,7 @@ if (myName === "Mickey Mouse") {
             If there are <span class="keyword">three</span> equals signs, we're checking if two things are the same or not.
         </div>
 
-        <p>Time to experiment with this. We're going to create a simple password check.</p>
+        <p>Time to experiment with this. We're going to create a simple password check, where the user enters a password, and the program checks if that is correct - the correct password is "swordfish" (but shhh, don't tell anyone!).</p>
 
         <div class="actions">Create a new Javascript file called <b>passwordCheck.js</b> and include it in your web page with a script tag.</div>
 
@@ -75,10 +75,7 @@ if (myName === "Mickey Mouse") {
 
         <div class="code">
 function checkPassword() {
-    var password = document.getElementById("password").value;
-    if (password === "swordfish") {
-        console.log(password + " is correct!");
-    }
+    console.log("Yes, that's a password");
 }
         </div>
     
@@ -86,6 +83,30 @@ function checkPassword() {
 
         <div class="code">
 &lt;button id="login" onclick="checkPassword()"&gt;Log In&lt;/button&gt;
+        </div>
+
+        <p>You should now be able to see the "Yes, that's a password" message whenever you click the button. Nice!
+
+            Time to make it interactive. First, we need to fetch the text out of the text entry box:
+        </p>
+
+        <div class="code">
+function checkPassword() {
+    console.log("Yes, that's a password");
+    var password = document.getElementById("password").value;
+}
+        </div>
+
+        <p>And now we need an if check to see if the password is correct:</p>
+
+        <div class="code">
+function checkPassword() {
+    console.log("Yes, that's a password");
+    var password = document.getElementById("password").value;
+    if (password === "swordfish") {
+        console.log(password + " is correct!");
+    }
+}
         </div>
 
         <p>When you're done, you should have something which works like this:</p>
