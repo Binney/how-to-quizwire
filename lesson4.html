@@ -12,11 +12,27 @@
     <div class="container">
         <h1>Making your web site interactive with Javascript</h1>
 
-        <p>Now we're going to write some real code! Javascript is a super useful language that almost every computer can "speak": it's used to interact with a web page.</p>
+        <p>Now we're going to write some real code! Javascript is a super useful language that almost every computer in the world can "speak": it's used to interact with a web page.</p>
         
         <h2>How to add a Javascript script</h2>
 
-        <div class="actions">Create an empty new file and call it script.js. Then include it in your web page using the script tag.</div>
+        <p>First, you create a new Javascript file. Then you tell your web page to run that Javascript.</p>
+
+        <div class="actions">Create an empty new file and call it script.js. Save it in the same folder as your lesson4.html.</div>
+
+        <p>This is a Javascript file! We'll be writing Javascript and then your web browser will run it. Try writing this in your script.js:</p>
+
+        <div class="code">
+alert("Hello, world!");
+        </div>
+
+        <p>Now we have to tell your web page to run this Javascript like a script. You do this with the special "script" tag:</p>
+
+        <div class="code">
+&lt;script type="text/javascript" src="script.js"&gt;&lt;/script&gt;
+        </div>
+
+        <p>Try loading up the web page in your browser. You should see a popup message, nicely done!</p>
 
         <h2>What do you use Javascript for?</h2>
 
@@ -24,7 +40,15 @@
 
         <p>Create a button, and use the onClick handler to connect it to a function.</p>
 
-        <p>What's a function?</p>
+        <h2>What's a function?</h2>
+
+        <p>You might have come across the word "function" in maths. There, it means a process where you can put a number in one end and get a number out the other end.</p>
+
+        <img src="Illustration here">
+
+        <o>Well, in computing functions are much the same. You send inputs in one end, and outputs come out the other end. 
+            
+            Here's an example of a Javascript function which multiplies two numbers together:</o>
 
         <div class="code">
 function multiply(x, y) {
@@ -32,11 +56,24 @@ function multiply(x, y) {
 }
         </div>
 
-        <p>Then, you can <span class="keyword">call</span> the function like this:</p>
+        <div class="actions">Copy this function into your Javascript file and save it.</div>
+
+        <p>Let's examine it more closely. We start with "function", because guess what, it's a function. "multiply" is the name of the function.
+
+            Then, we have (x, y). These are our inputs, which in computing we call <span class="keyword">arguments</span>.
+
+            Finally we use the word <span class="keyword">return</span> for our outputs.
+        </p>
+
+        <div class="actions">Open your HTML in the browser, and go to the Javascript console.</div>
+
+        <p>You can <span class="keyword">call</span> the function like this:</p>
 
         <div class="code">
 console.log(multiply(2, 3));
         </div>
+
+        <p>Try it out! Go to the console and type out "multiply(2,3)" and hopefully you'll see 6.</p>
 
         <div class="pagination">
                 <a href='lesson3.html'>&#8592; Click here to go back to lesson 3</a>
@@ -46,5 +83,6 @@ console.log(multiply(2, 3));
 
     </div>
 
+    <script src="week3.js"></script>
 </body>
 </html>
