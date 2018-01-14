@@ -1,6 +1,6 @@
-# How To Quizwire
+# Tutorial
 
-## This is the tutorial for QuizWire. 
+## This is the tutorial for work experience.
 
 You'll learn how to make a website, add content, make it look nice, and build interactive features using Javascript.
 
