@@ -127,3 +127,7 @@ p {
 .table-no-border {
     border: none;
 }
+
+.captions {
+    font-size: 80%;
+}
