@@ -1,0 +1,100 @@
+/* This is the CSS theme for the CSS Challenge. It's got all the answers in */
+
+body {
+	background-image: linear-gradient(black, crimson);
+	margin: 0;
+	font-family: 'Saira Condensed', sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+}
+
+h1, h2, h3 {
+	font-family: 'Supermercado One', cursive;
+}
+
+h1, h2 {
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+}
+
+h1 {
+	text-align: center;
+	padding: 20px;
+}
+
+h2 {
+	padding: 10px;
+}
+
+p {
+	text-align: justify;
+}
+
+a {
+	color: crimson;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.5s ease;
+}
+
+a:visited {
+	color: orangered;
+}
+
+a:hover {
+	color: orange;
+}
+
+a:active {
+	color: darkorange;
+}
+
+table {
+	border: 3px solid gold;
+	background: crimson;
+	margin: auto;
+	cursor: crosshair;
+	user-select: none;
+}
+
+th {
+	color: gold;
+}
+
+td {
+	border-spacing: 0;
+	padding: 5px;
+	background: white;
+}
+
+td:hover {
+	background: lavenderblush;
+}
+
+.attribute-name {
+	font-weight: bold;
+}
+
+ul {
+	width: 80%;
+	margin: auto;
+	list-style-type: square;
+}
+
+li h3 {
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+li p {
+	margin-top: 0;
+}
+
+.finale {
+	text-align: center;
+}
