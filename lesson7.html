@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lesson 7: The Quiz Website | How To Quizwire</title>
+    <title>Lesson 7: JQuery | How To Quizwire</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
@@ -13,7 +13,15 @@
 
         <p>The time has come for us to start work on our main project: we're going to make a quiz game!</p>
 
-        <div class="actions">Create a new empty file and call it quiz.html. Then, create another and call it quiz.js.</div>
+        <div class="actions">Create a new empty file and call it quiz.html. Fill it in with the basic HTML structure.</div>
+
+        <p>Enter some text in the web page and give it a suitable title. Also, add a div and give it an ID of "app":</p>
+
+        <div class="code">
+&lt;div id="app"&gt;Loading...&lt;/div&gt;
+        </div>
+
+        <div class="actions">Now, create another new empty file and call it quiz.js.</div>
 
         <p>For this project, we're going to use a tool called JQuery. It'll make Javascript easier to write.</p>
 
@@ -37,6 +45,20 @@
 &lt;/body&gt;
 &lt;/html&gt;
         </div>
+
+        <p>Time to use JQuery for something. Go to your quiz.js file.
+
+            The most useful tool JQuery offers is the $ or dollar function. It's like a Swiss Army knife for Javascript. For instance, you can just write
+        </p>
+
+        <div class="code">
+$("#app").html("Here's the quiz!");
+        </div>
+
+        <p>and JQuery will
+            1) find the element with ID="app" 
+            2) replace its inner HTML with the message we typed.
+        </p>
 
         <div class="pagination">
             <a href='lesson6.html'>&#8592; Click here to go back to lesson 6</a>
