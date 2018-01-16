@@ -107,3 +107,28 @@ p {
     border: 1px solid teal;
     border-radius: 5px;
 }
+
+.challenge {
+    background: gold;
+    color: brown;
+    border-radius: 5px;
+    padding: 1em 2em 1em 3em;
+    font-size: 250%;
+    position: relative;
+}
+
+.challenge::before {
+    content: '\2605';
+    font-size: 250%;
+    position: absolute;
+    top: .125em;
+    left: .25em;
+}
+
+.table-no-border {
+    border: none;
+}
+
+.captions {
+    font-size: 80%;
+}
