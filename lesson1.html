@@ -15,15 +15,55 @@
     <p>HTML is the language that websites are written in. You can see some examples using Chrome's Developer Tools.</p>
 
 	<h2>How to access Developer Tools</h2>
-	<p>Right click on a web page and click Inspect</p>
+	<p>Right click on a web page and click Inspect (it's at the bottom).</p>
+
+    <!-- Whoa! This is a secret message hidden in the HTML of this web page. It's called a comment and we'll see more of them later. -->
+
+    <p>You should see a window pop up at the side of the screen. This shows you the pure HTML, which your browser (i.e. Chrome, Edge, Safari, etc) will render into a web page you can read. It looks a little different to the web page itself but can you see the elements of the page showing up in HTML?</p>
 
 	<h2>How to change HTML with Developer Tools</h2>
 	<p>Find the HTML you want to change in the Elements tab. Double click and then start typing. Your new HTML will replace the old version.</p>
 
     <h2>Watch out! Your changes don't get saved. If you refresh the page, they will be gone! Developer Tools is only for testing.</h2>
     
+    <h1>Tags</h1>
+    <p>You'll have noticed when you were inspecting this web page that there are loads of angle brackets (&lt; and &gt;) in the HTML. These are used to build what we call <span class="keyword">tags.</span>
+
+    <img src="some_html.png" style="width: 200px;">
+
+    <p>A tag might represent a section of the page, a picture, a link, or something else. You can tell what sort of tag it is by reading the word or letter between the angle brackets. For example, this paragraph is enclosed by &lt;p&gt; tags, and p stands for paragraph.</p>
+
+    <div style="background: orange">
+        <h3>Important facts about tags</h3>
+        <ol>
+            <li>For every open angle bracket there is an equal and opposite close angle bracket. If you don't close every tag, watch out! Your webpage won't work.</li>
+            <li>Similarly, if you open a tag you have to close it! For instance, if you write a &lt;p&gt; you have to also write a &lt;/p&gt;. The slash means you're closing it.</li>
+            <li>Your web page will still work if you don't close all of your tags, but some things will break. However, if you don't close your brackets it will properly break, like properly. Try deleting a bracket or two with Developer Tools and you'll see what I mean.</li>
+        </ol>
+    </div>
+
     <h1>Useful HTML</h1>
-    <img src='Image of various HTML tags here'>
+    <p>Here are some HTML tags which feature somewhere on this page.</p>
+
+    <div class="actions">Find an example of each. Can you figure out what that tag means? (Hint: what does each letter stand for? Google it if you're not sure.)</div>
+    <ul>
+        <li>&lt;p&gt;</li>
+        <li>&lt;h1&gt;</li>
+        <li>&lt;h2&gt;</li>
+        <li>&lt;ul&gt;</li>
+        <li>&lt;ol&gt; (extension question: how is &lt;ol&gt; different to &lt;ul&gt;?)</li>
+        <li>&lt;li&gt;</li>
+    </ul>
+
+    <h2>More advanced HTML</h2>
+    <ul>
+        <li>&lt;a&gt;</li>
+        <li>&lt;img&gt;</li>
+        <li>&lt;body&gt;</li>
+        <li>&lt;head&gt;</li>
+        <li>&lt;title&gt;</li>
+        <li>&lt;div&gt;</li>
+    </ul>
 
     <div class="pagination">
             <a href='index.html'>&#8592; Click here to go back to the homepage</a>
